@@ -19,6 +19,7 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { NgbModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,10 @@ import { NgbModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
     ]),
   ],
-  providers: [],
+  providers: [
+    AuthService,
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
